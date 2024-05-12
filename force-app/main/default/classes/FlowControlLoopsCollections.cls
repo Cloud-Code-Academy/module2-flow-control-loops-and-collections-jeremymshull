@@ -33,9 +33,11 @@ public with sharing class FlowControlLoopsCollections {
         
         if (x < y || x == null || y == null) {
             return null; // Replace null with the variable you used to store the result
-        } else {
+        } else if (x > y) {
             return message;
-        } 
+        } else {
+            return null;
+        }
     }
 
     /**
