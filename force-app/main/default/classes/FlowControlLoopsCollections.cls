@@ -314,10 +314,18 @@ public with sharing class FlowControlLoopsCollections {
         List<Integer> numbers = new List<Integer>{-1, 2, -3, 4, -5, 6}; //DO NOT CHANGE
 
         // Loop through the list of integers
-            // if the number is negative skip this iteration
-        
+        Integer sums = 0;
 
-        return null; // Replace null with the variable you used to store the result
+        for (Integer n: numbers) {
+            // if the number is negative skip this iteration
+            if (n < 0) {
+                continue;
+            } else {
+                sums += n;
+            }
+        }
+            
+        return sums; // Replace null with the variable you used to store the result
     }
 
     /**
