@@ -279,7 +279,7 @@ public with sharing class FlowControlLoopsCollections {
         // Create a new list of integers 
         List<Integer> numberList = new List<Integer>();
         
-        for(Integer i = 1; i < n + 1; i++) {
+        for(Integer i = 1; i <= n; i++) {
             numberList.add(i);   
          }
 
