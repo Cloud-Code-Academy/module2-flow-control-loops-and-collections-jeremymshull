@@ -105,12 +105,7 @@ public with sharing class FlowControlLoopsCollections {
             return null; // Replace null with the variable you used to store the result  
         } 
         Integer remainder = math.mod(a, 2);
-        if (remainder == 0) {
-            return 'Even';
-        } else {
-            return 'Odd';
-        }
-        
+        return remainder == 0 ? 'Even' : 'Odd';
     }
 
     /**
