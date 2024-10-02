@@ -33,11 +33,11 @@ public with sharing class FlowControlLoopsCollections {
         
         if (x < y || x == null || y == null) {
             return null; // Replace null with the variable you used to store the result
-        } else if (x > y) {
+        } 
+        if (x > y) {
             return message;
-        } else {
-            return null;
-        }
+        } 
+        return null;
     }
 
     /**
@@ -50,12 +50,7 @@ public with sharing class FlowControlLoopsCollections {
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age) {
-        if (age < 18) {
-            return false;
-        } else {
-            return true; // Replace null with the variable you used to store the result
-        }
-        
+        return age >= 18;
     }
 
     /**
@@ -68,17 +63,10 @@ public with sharing class FlowControlLoopsCollections {
      * @return The maximum of the two numbers, or null if either number is null.
      */
     public static Integer findMax(Integer num1, Integer num2) {
-        // Initialize largestNum as null
-        Integer largestNum = null;
-        if (num1 == num2 || num1 > num2) {
-            largestNum = num1;
-        } else if (num1 < num2) {
-            largestNum = num2;
-        } else {
+        if (num1 == null || num2 == null) {
             return null;
         }
-
-        return largestNum; // Replace null with the variable you used to store the result
+        return Math.max(num1, num2); // Replace null with the variable you used to store the result
     }
 
 
@@ -93,14 +81,14 @@ public with sharing class FlowControlLoopsCollections {
     public static String checkNumber(Integer a) {
         if (a == null) {
             return null; // Replace null with the variable you used to store the result
-        } else if (a > 0) {
+        } 
+        if (a > 0) {
             return 'Positive';
-        } else if (a == 0) {
+        } 
+        if (a == 0) {
             return 'Zero';
-        } else {
-            return 'Negative';
-        }
-        
+        } 
+        return 'Negative';
     }
 
     /**
@@ -117,12 +105,7 @@ public with sharing class FlowControlLoopsCollections {
             return null; // Replace null with the variable you used to store the result  
         } 
         Integer remainder = math.mod(a, 2);
-        if (remainder == 0) {
-            return 'Even';
-        } else {
-            return 'Odd';
-        }
-        
+        return remainder == 0 ? 'Even' : 'Odd';
     }
 
     /**
@@ -180,7 +163,7 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer sumUpToLimit(Integer intLimit) {
         Integer sumOfNumbers = 0;
-        for (Integer i = 0; i < intLimit + 1; i++){
+        for (Integer i = 1; i <= intLimit; i++){
             sumOfNumbers += i;
         }
         return sumOfNumbers; // Replace null with the variable you used to store the result
@@ -236,19 +219,7 @@ public with sharing class FlowControlLoopsCollections {
      * @return A List of integers containing the numbers 1, 2, and 3.
      */
     public static List<Integer> createAndPopulateList() {
-        // Create a new list of integers
-        List<Integer> integerList = new List<Integer>();
-
-        // Add the integers 1, 2, and 3 to the list
-        // add 1
-        integerList.add(1);
-        // add 2
-        integerList.add(2);
-        // add 3
-        integerList.add(3);
-
-        // Return the populated list
-        return integerList; // Replace null with the variable you used to store the result
+        return new List<Integer>{1, 2, 3};
     }
 
     /**
@@ -279,7 +250,7 @@ public with sharing class FlowControlLoopsCollections {
         // Create a new list of integers 
         List<Integer> numberList = new List<Integer>();
         
-        for(Integer i = 1; i <= n; i++) {
+        for (Integer i = 1; i <= n; i++) {
             numberList.add(i);   
          }
 
@@ -338,18 +309,7 @@ public with sharing class FlowControlLoopsCollections {
      */
     public static Integer findWordInList(String wordToFind, List<String> words) {
         // The variable to store the index of the word
-        Integer indexOfWord = words.indexOf(wordToFind);
-
-        // Loop through the list of words
-        for (String word: words) {
-            // If the current word is the word to find, exit the loop
-            if (indexOfWord > 0) {
-                break;
-            }
-        }
-            
-
-        return indexOfWord; // Replace null with the variable you used to store the result
+        return words.indexOf(wordToFind);
     }
 
     /**
