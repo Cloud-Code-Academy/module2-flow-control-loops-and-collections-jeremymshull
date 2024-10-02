@@ -219,19 +219,7 @@ public with sharing class FlowControlLoopsCollections {
      * @return A List of integers containing the numbers 1, 2, and 3.
      */
     public static List<Integer> createAndPopulateList() {
-        // Create a new list of integers
-        List<Integer> integerList = new List<Integer>();
-
-        // Add the integers 1, 2, and 3 to the list
-        // add 1
-        integerList.add(1);
-        // add 2
-        integerList.add(2);
-        // add 3
-        integerList.add(3);
-
-        // Return the populated list
-        return integerList; // Replace null with the variable you used to store the result
+        return new List<Integer>{1, 2, 3};
     }
 
     /**
